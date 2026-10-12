@@ -1,0 +1,26 @@
+# Compilacion
+bin/
+obj/
+dist/
+
+# Rutas locales
+paths.props
+
+# Herramientas y archivos generados localmente
+.dotnet/
+.nuget/
+.home/
+tools/
+decomp/
+scratch_dec/
+
+# IDE
+.vs/
+.idea/
+*.user
+
+# Notas internas de sesion y guia personal de publicacion (no van al repo)
+SESSION_NOTES.md
+PUBLISHING.md
+.local/
+.claude/
