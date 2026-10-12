@@ -1,0 +1,7 @@
+{
+  "name": "FreeConveyors",
+  "version_number": "1.4.0",
+  "website_url": "https://github.com/falcon-enoc/FreeConveyors",
+  "description": "Belts, splitters and underground belts no longer consume gears. Machines consume gears instead (configurable).",
+  "dependencies": ["BepInEx-BepInExPack-5.4.2305", "Ice_Box_Studio_GK2-GK2LocalizationAPI-1.0.1"]
+}

@@ -1,0 +1,9 @@
+<!-- Copia este archivo como "paths.props" (junto a este) y ajusta las rutas. paths.props esta en .gitignore. -->
+<Project>
+  <PropertyGroup>
+    <!-- Carpeta de instalacion del juego -->
+    <GameDir>C:\Program Files (x86)\Steam\steamapps\common\Graveyard Keeper 2</GameDir>
+    <!-- Perfil de Thunderstore Mod Manager / r2modman que tiene BepInExPack y GK2LocalizationAPI instalados -->
+    <!-- <ProfileDir>C:\Users\TU_USUARIO\AppData\Roaming\Thunderstore Mod Manager\DataFolder\GraveyardKeeper2\profiles\Default</ProfileDir> -->
+  </PropertyGroup>
+</Project>
