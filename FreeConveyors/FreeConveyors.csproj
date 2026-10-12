@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssemblyName>FreeConveyors</AssemblyName>
+    <RootNamespace>FreeConveyors</RootNamespace>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <NoWarn>MSB3277</NoWarn>
+  </PropertyGroup>
+
+  <!-- Rutas locales (no se suben a git): copia paths.props.example a paths.props y ajustalo. -->
+  <Import Project="..\paths.props" Condition="Exists('..\paths.props')" />
+
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Graveyard Keeper 2</GameDir>
+    <ProfileDir Condition="'$(ProfileDir)' == ''">$(APPDATA)\Thunderstore Mod Manager\DataFolder\GraveyardKeeper2\profiles\Default</ProfileDir>
+    <ManagedDir>$(GameDir)\GraveyardKeeper2_Data\Managed</ManagedDir>
+    <BepInExCore>$(ProfileDir)\BepInEx\core</BepInExCore>
+    <LocApiDir>$(ProfileDir)\BepInEx\plugins\Ice_Box_Studio_GK2-GK2LocalizationAPI\GraveyardKeeper2LocalizationAPI</LocApiDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(BepInExCore)\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCore)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="GraveyardKeeper2LocalizationAPI"><HintPath>$(LocApiDir)\GraveyardKeeper2LocalizationAPI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(ManagedDir)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="LazyBearTechnology"><HintPath>$(ManagedDir)\LazyBearTechnology.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(ManagedDir)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(ManagedDir)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <None Include="FreeConveyors.Localization.json"><CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory></None>
+  </ItemGroup>
+</Project>
